@@ -1,12 +1,16 @@
 import pytest
-from burger import Burger
+from praktikum.burger import Burger
 
 
 class TestBurger:
-    def test_init(self):
+    def test_init_bun(self):
         burger = Burger()
 
         assert burger.bun is None
+
+    def test_init_ingridients(self):
+        burger = Burger()
+
         assert not burger.ingredients
 
     def test_set_buns(self, mock_bun):
